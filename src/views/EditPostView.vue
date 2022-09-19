@@ -3,16 +3,12 @@
     <h1>
       Front page stuff
     </h1>
-
     <v-form>
+
       <v-text-field
-      color="secondary"
-      label="Title"
-      variant="solo"
-      placeholder="Enter a title"
-      v-model="addPostInfo"
-      >
-      </v-text-field>
+
+            label="Regular"
+          ></v-text-field>
     </v-form>
 
     <v-btn @click="firebaseAddSingleItem()">Add Static Data</v-btn>    
@@ -31,10 +27,8 @@
 <script setup>
 //import { db } from '../firebase.js'
 //import { ref } from 'vue'
-import { onMounted, ref } from 'vue'
+import { onMounted, ref} from 'vue'
 import usePosts from '../modules/usePosts'
-
-let addPostInfo = ref('')
 
 //import { collection, /* getDocs,  */doc, deleteDoc, onSnapshot} from "firebase/firestore"; 
 
@@ -52,7 +46,6 @@ const {posts, getPostsData, firebaseDeleteSingleItem, firebaseAddSingleItem, fir
   console.log("Data deleted", id)
 }  */
 
-//parttwo section
 /* const postDataRef = collection(db, "posts")
 const getPostsData = () => {
   onSnapshot(postDataRef, (snapshot) => {
@@ -66,7 +59,6 @@ const getPostsData = () => {
   })
   } */
 
-//main section
 /* const querySnapshot = await getDocs(collection(db, "posts"));
 querySnapshot.forEach((doc) => {
   // doc.data() is never undefined for query doc snapshots
