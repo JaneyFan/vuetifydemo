@@ -3,6 +3,7 @@
     <v-card>
     <v-layout>
       <v-navigation-drawer
+      permanent
         expand-on-hover
         rail
       >
@@ -11,6 +12,7 @@
             prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
             title="Sandra Adams"
             subtitle="sandra_a88@gmailcom"
+            permanent
           ></v-list-item>
         </v-list>
 
@@ -18,16 +20,18 @@
 
         <v-list density="compact" nav>
           <router-link to="/">
-            <v-list-item prepend-icon="mdi-folder" title="My Files" value="myfiles"></v-list-item>
+            <v-list-item prepend-icon="mdi-pencil-outline" title="Home" value="myfiles"></v-list-item>
           </router-link>
           <router-link to="/about">
-            <v-list-item prepend-icon="mdi-account-multiple" title="Shared with me" value="shared"></v-list-item>
+            <v-list-item prepend-icon="mdi-account-multiple" title="Shared Posts" value="shared"></v-list-item>
           </router-link>
+          <router-link to="/editpostsview">
             <v-list-item prepend-icon="mdi-star" title="Starred" value="starred"></v-list-item>
+          </router-link> 
         </v-list>
       </v-navigation-drawer>
 
-      <v-main>
+      <v-main class="ma-2">
           <Suspense>
             <router-view></router-view>
           </Suspense>
@@ -47,3 +51,11 @@ export default {
   }),
 }
 </script>
+
+<style lang="scss">
+
+v.main{
+  min-height: 100vh;
+}
+  
+</style>
