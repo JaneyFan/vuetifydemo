@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      Front page stuff
+      Front page stuffs
     </h1>
 
     <!-- <v-form>
